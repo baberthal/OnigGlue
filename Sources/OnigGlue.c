@@ -1,4 +1,4 @@
-#include "include/OnigGlue.h"
+#include "OnigGlue.h"
 
 CFStringRef SwiftOnig_stringFromErrorCode(int code)
 {

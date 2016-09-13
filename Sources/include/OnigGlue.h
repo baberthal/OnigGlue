@@ -2,10 +2,6 @@
 #define SWIFT_ONIGURUMA_GLUE 1
 
 #include <CoreFoundation/CoreFoundation.h>
-
-#ifndef ONIG_ESCAPE_UCHAR_COLLISION
-#define ONIG_ESCAPE_UCHAR_COLLISION
-#endif /* ONIG_ESCAPE_UCHAR_COLLISION */
 #include "oniguruma.h"
 
 CFStringRef SwiftOnig_stringFromErrorCode(int code);
