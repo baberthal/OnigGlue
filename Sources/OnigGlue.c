@@ -1,4 +1,4 @@
-#include "OnigGlue.h"
+#include "include/OnigGlue.h"
 
 CFStringRef SwiftOnig_stringFromErrorCode(int code)
 {
@@ -37,6 +37,11 @@ CFStringRef SwiftOnig_stringFromErrorCodeAndInfo(int code, OnigErrorInfo info)
                                  strlen,
                                  kCFStringEncodingUTF8,
                                  false);
+}
+
+void SwiftOnig_defaultWarningFunction(const char *msg)
+{
+  fprintf(stderr, "%s\n", msg);
 }
 
 __attribute__((constructor)) void SwiftOnig_InitializeLibrary(void)
