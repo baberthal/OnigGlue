@@ -3,6 +3,6 @@ import PackageDescription
 let package = Package(
     name: "OnigGlue",
     dependencies: [
-        .Package(url: "../COniguruma", majorVersion: 0)
+        .Package(url: "https://github.com/baberthal/COniguruma.git", majorVersion: 0)
     ]
 )
